@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         purchaseList.appendChild(purchaseListItemOne);
         purchaseList.appendChild(purchaseListItemTwo);
 
-        confirmPurchaseButton.onclick = () => {
+        confirmPurchaseButton.addEventListener('click', () => {
             fridgeInfoContainer.replaceWith(purchaseListContainer)
             buttonsContainer.style.display = "none";
-        }
+        })
     }, 500)
 
 

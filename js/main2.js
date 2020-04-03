@@ -45,11 +45,3 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementsByClassName("header-menu")[0].classList.toggle("header-menu_active")
     })
 }, !1);
-
-
-$(document).ready(function () {
-
-    var carousel = $("#carousel");
-
-    carousel.owlCarousel();
-});

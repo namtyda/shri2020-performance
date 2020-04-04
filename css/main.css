@@ -171,6 +171,24 @@
     margin-top: 10px;
   }
   
+  #cb { display: none; }
+
+#cb ~ .purchase_list_wrap {
+    display: none;
+}
+
+#cb:checked ~ .card_description, #cb:checked ~ .buttons-wrap {
+    display: none;
+}
+
+#cb:checked ~ .purchase_list_wrap {
+    display: block;
+}
+.card_description {
+    font-size: 24px;
+    padding: 24px 50px 0 0;
+    margin-bottom: 0
+}
   .card {
     position: relative;
     flex-direction: column;

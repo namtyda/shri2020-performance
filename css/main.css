@@ -171,6 +171,20 @@
     margin-top: 10px;
   }
   
+  #cb { display: none; }
+
+#cb ~ .purchase-list-wrap {
+    display: none;
+}
+
+#cb:checked ~ .card-description, #cb:checked ~ .buttons-wrap {
+    display: none;
+}
+
+#cb:checked ~ .purchase-list-wrap {
+    display: block;
+}
+
   .card {
     position: relative;
     flex-direction: column;

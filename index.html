@@ -4,7 +4,6 @@
     <meta name="robots" content="noindex">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="favicon.png">  
-    <script src="./js/main2.js"></script>
 </head>
 
 <body>
@@ -289,4 +288,20 @@
         <a class="footer-menu__link" href="./assets/license.pdf" target="blank">Лицензия</a>
     </menu>
 </footer>
+<script>
+const target = document.querySelector('.critical-cam');
+const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            let div = entry.target
+            div.style.background = `url('${entry.target.getAttribute('data-src')}')`;
+            div.style.backgroundSize = '100%'
+            entry.target.removeAttribute('data-src');
+            obs.unobserve(div)
+        }
+    });
+});
+obs.observe(target);
+
+</script>
 </body></html>

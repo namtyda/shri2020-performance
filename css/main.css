@@ -213,13 +213,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
     font-family: OpenSansReg;
-    src: url("../assets/OpenSans-Regular.woff2");
+    src: url("../assets/OpenSans-Regular.woff2") format('woff2');
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: OpenSansLight;
-    src: url("../assets/OpenSans-Light.woff2");
+    src: url("../assets/OpenSans-Light.woff2") format('woff2');
+    font-display: swap;
 }
 
 body {

@@ -140,17 +140,17 @@
     margin-top: 10px;
   }
   
-  #cb { display: none; }
+  #check { display: none; }
 
-#cb ~ .purchase-list-wrap {
+#check ~ .purchase-list-wrap {
     display: none;
 }
 
-#cb:checked ~ .card-description, #cb:checked ~ .buttons-wrap {
+#check:checked ~ .card-description, #check:checked ~ .buttons-wrap {
     display: none;
 }
 
-#cb:checked ~ .purchase-list-wrap {
+#check:checked ~ .purchase-list-wrap {
     display: block;
 }
 

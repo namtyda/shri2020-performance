@@ -179,7 +179,7 @@
     <div class="card card_size_s" style="border-radius:22px">
     <div class="card-heading">
     <div class="card-icon-wrap">
-    <img class="card-icon" loading="lazy" src="img/battery.svg">
+    <img class="card-icon" loading="lazy" data-src="img/battery.svg">
     </div>
     <h3 class="card-title">Зарядка завершена</h3>
     </div>
@@ -216,7 +216,7 @@
     <div class="card card_size_s" style="border-radius:22px">
     <div class="card-heading">
     <div class="card-icon-wrap">
-    <img class="card-icon" loading="lazy" src="img/kettle.svg">
+    <img class="card-icon" loading="lazy" data-src="img/kettle.svg">
     </div>
     <h3 class="card-title">Вода вскипела</h3>
     </div>
@@ -238,7 +238,7 @@
     <a class="footer-menu__link" href="./assets/license.pdf" target="blank">Лицензия</a>
     </menu>
     </footer>
-    <script>const target=document.querySelector('.critical-cam');const obs=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){let div=entry.target
-    div.style.background=`url('${entry.target.getAttribute('data-src')}')`;div.style.backgroundSize='100%'
-    entry.target.removeAttribute('data-src');obs.unobserve(div)}});});obs.observe(target);</script>
+    <script>const target=document.querySelectorAll('[data-src]');const obs=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){let div=entry.target
+    if(div.classList.contains('critical-cam')){div.style.background=`url('${entry.target.getAttribute('data-src')}')`;div.style.backgroundSize='100%'
+    entry.target.removeAttribute('data-src');obs.unobserve(div);}else{div.src=div.getAttribute('data-src');entry.target.removeAttribute('data-src');obs.unobserve(div);}}});});target.forEach(el=>obs.observe(el));</script>
     </body></html>
